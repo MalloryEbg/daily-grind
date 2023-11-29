@@ -25,6 +25,11 @@ function coffeeTemplate(coffee) {
     `;
 }
 
+let myDate = new Date();
+let myDay = myDate.getDay();
+let today = "";
+let coffee = "";
+
 //use location object to access querystring (address bar)
 const queryString = window.location.search;
     
@@ -35,27 +40,12 @@ console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
 
 
-
-
-
-let myDate = new Date();
-let myDay = myDate.getDay();
-let today = "";
-
 if(urlParams.has("day")){//from querystring
 myDay = urlParams.get("day");
 }
-if(urlParams.has("day")){//from querystring
-    myDay = urlParams.get("day");
-}
 
-if(urlParams.has("day")){//from querystring
-    myDay = urlParams.get("day");
-}else{//today's day of week
-    myDay = today;
-}
-
-
+// Testing Days
+// myDay = 4;
 myDay = parseInt(myDay);
 
 switch (myDay) {
